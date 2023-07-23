@@ -1,0 +1,25 @@
+{
+  "name": "@origamicore/hyperion",
+  "version": "1.0.0",
+  "description": "Blockchain Hyperion",
+  "main": "dist/index.js",
+  "scripts": { 
+    "build": "npx tsc",
+    "serve": "node ./dist/sample/sampleHyperion.js",
+    "publish": "npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@eosrio/hyperion-stream-client": "^1.0.3",
+    "@origamicore/core": "^4.0.1",
+    "tsoribase": "^0.1.4",
+    "node-fetch": "^2.6.6",
+    "eosjs-account-name": "^2.2.1",
+    "fetch": "^1.1.0",
+    "eosjs": "^22.1.0",
+    "web3": "^1.7.4",
+    "@truffle/hdwallet-provider": "^1.6.0"
+  }
+}
