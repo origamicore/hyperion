@@ -141,7 +141,7 @@ export default class HyperionRouter
                 sort:'asc',
                 after:time
             }
-            console.log(url,param);
+            //console.log(url,param);
             
             if(!action.action || action.action=='*')
             {

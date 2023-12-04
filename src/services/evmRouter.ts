@@ -18,7 +18,7 @@ export default class EvmRouter
         this.address=address;
         this.showLog=showLog;
     }
-    async send(name:string,params:any[],phrase:string,from:string)
+    async send(name:string,params:any[],phrase:string,from:string,gas:number=210000)
     {
         let provider = new Provider({
             mnemonic: {
@@ -27,7 +27,7 @@ export default class EvmRouter
             providerOrUrl:this.url
         });
         const web3 = new Web3(provider);   
-        const myContract = new web3.eth.Contract(this.abi, this.address,{from}); 
+        const myContract = new web3.eth.Contract(this.abi, this.address,{from,gas}); 
         await myContract.methods[name](...params).send({from });
 
     }
